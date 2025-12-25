@@ -2,6 +2,10 @@ const canvas = document.createElement("canvas");
 canvas.className = "snow";
 document.body.appendChild(canvas);
 
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
 const ctx = canvas.getContext("2d");
 let w, h;
 let flakes = [];
