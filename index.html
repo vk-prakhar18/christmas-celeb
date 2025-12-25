@@ -7,32 +7,62 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="container">
     <h1>Merry Christmas 🎄</h1>
+
     <p>
       May your Christmas be filled with warmth, soft lights, cozy moments,
-      and beautiful memories that stay forever.
+      gentle smiles, and beautiful memories that stay forever.
     </p>
+
+    <p>
+      May this festive season bring peace to your heart, joy to your soul,
+      and endless reasons to smile today and always ✨
+    </p>
+
+    <p>
+      Wishing you love, laughter, and magical moments wrapped in
+      happiness and cheer ❤️🎁
+    </p>
+
     <a href="notes.html" class="button">Open Notes 💌</a>
-   
-<button onclick="playMusic()" style="
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  background: crimson;
-  color: white;
-  cursor: pointer;
-  margin-top: 20px;
-">
-  🎶 Play Christmas Music
-  <audio id="bgMusic" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
 
-</button>
+    <!-- Music Button -->
+    <button id="musicBtn" onclick="playMusic()" style="
+      padding: 12px 22px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: crimson;
+      color: white;
+      cursor: pointer;
+      margin-top: 25px;
+    ">
+      🎶 Play Christmas Music
+    </button>
 
+    <!-- Audio (KEEP OUTSIDE BUTTON) -->
+    <audio id="bgMusic" loop>
+      <source src="song.mp3" type="audio/mpeg">
+    </audio>
 
-  <script src="script.js"></script>
+  </div>
+
+  <script src="script.js">
+    function playMusic() {
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicBtn");
+
+  if (music.paused) {
+    music.play();
+    btn.innerText = "⏸ Pause Music";
+  } else {
+    music.pause();
+    btn.innerText = "🎶 Play Christmas Music";
+  }
+}
+
+  </script>
 </body>
 </html>
