@@ -30,16 +30,23 @@ body {
   margin: auto;
   padding: 80px 20px;
   text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 30px;
 }
+
 
 /* Headings */
 h1 {
   font-family: 'Pacifico', cursive;
   font-size: clamp(2rem, 6vw, 3rem);
-  color: #c62828;
+  color: #ffebee;
   margin-bottom: 20px;
   animation: float 3s ease-in-out infinite;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
+
 
 @keyframes float {
   0%,100% { transform: translateY(0); }
@@ -60,7 +67,7 @@ p {
 .button {
   display: inline-block;
   padding: 14px 34px;
-  background: #c62828;
+  background: linear-gradient(90deg, #ff5252, #c62828);
   color: white;
   text-decoration: none;
   border-radius: 40px;
@@ -69,10 +76,11 @@ p {
 }
 
 .button:hover {
-  background: #a61b1b;
+  background: linear-gradient(90deg, #ff6f6f, #a61b1b);
   transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
+
 
 /* Music toggle button (shares .button styles) */
 .music-toggle {
